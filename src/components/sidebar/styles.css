@@ -1,0 +1,8 @@
+.Container-Sidebar {
+    @apply
+    w-[348px]
+    bg-[#121214]
+    p-6
+    border-l
+    border-gray-600
+}
