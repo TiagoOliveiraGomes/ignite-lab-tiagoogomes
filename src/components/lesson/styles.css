@@ -25,7 +25,6 @@
 
 .Container-Lesson .AoVivo-Text {
     @apply
-    border-brand-green-300
     text-xs
     rounded
     py-[0.125rem]
@@ -36,7 +35,6 @@
 
 .Container-Lesson .LessonCard-title{
     @apply
-    text-brand-gray-200
     mt-5
     block
 }

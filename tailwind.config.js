@@ -34,6 +34,10 @@ module.exports = {
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
       },
+
+      backgroundImage: {
+        blur: 'url(/src/assets/background-blur.png)'
+      }
     },
   },
   plugins: [],

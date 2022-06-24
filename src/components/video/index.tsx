@@ -9,18 +9,7 @@ import { gql, useQuery } from '@apollo/client'
 interface VideoProps {
   lessonSlug: string,
 }
-interface GetLessonBySlugResponse{
-  lesson: {
-    title: string,
-    videoId: string,
-    description:string,
-    teacher: {
-      bio:string,
-      avatarURL: string,
-      name: string,
-    }
-  }
-}
+
 
 const iconImage = <Image size={40} />
 const iconArrowDown = <FileArrowDown size={40} />
@@ -38,6 +27,19 @@ query GetLessonBySlug ($slug: String) {
   }
 }
 `
+
+interface GetLessonBySlugResponse{
+  lesson: {
+    title: string,
+    videoId: string,
+    description:string,
+    teacher: {
+      bio:string,
+      avatarURL: string,
+      name: string,
+    }
+  }
+}
 
 export default function Video(props:VideoProps) {
   const { data } = useQuery<GetLessonBySlugResponse>(GET_LESSON_BY_SLUG_QUERY, {
@@ -58,7 +60,7 @@ export default function Video(props:VideoProps) {
       <div className='video-elements'>
         <div className='video'>
           <Player>
-            <Youtube videoId={data.lesson.videoId} key={51651} />
+            <Youtube videoId={data.lesson.videoId} key={data.lesson.videoId} />
             <DefaultUi />
           </Player>
         </div>
