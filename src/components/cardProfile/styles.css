@@ -1,0 +1,30 @@
+.card-profile{
+    @apply
+    flex
+    items-center
+    gap-4
+    mt-6
+}
+
+.card-profile img{
+    @apply
+    h-16
+    w-16
+    rounded-full
+    border-2
+    border-brand-blue-500
+}
+
+.card-profile strong{
+    @apply
+    font-bold
+    text-2xl
+    block
+}
+
+.card-profile span{
+    @apply
+    text-brand-gray-200
+    text-sm
+    block
+}

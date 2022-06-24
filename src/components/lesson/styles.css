@@ -1,0 +1,42 @@
+
+.Container-Lesson .Lesson-Card {
+    @apply
+    rounded
+    border
+   border-brand-gray-500
+    p-4
+    mt-2
+}
+
+.Container-Lesson .lessonCard-Header {
+    @apply
+    flex
+    items-center
+    justify-between
+}
+
+.Container-Lesson .content-released {
+    @apply
+    font-medium
+    flex
+    items-center
+    gap-2
+}
+
+.Container-Lesson .AoVivo-Text {
+    @apply
+    border-brand-green-300
+    text-xs
+    rounded
+    py-[0.125rem]
+    px-2
+    text-white
+    font-bold
+}
+
+.Container-Lesson .LessonCard-title{
+    @apply
+    text-brand-gray-200
+    mt-5
+    block
+}

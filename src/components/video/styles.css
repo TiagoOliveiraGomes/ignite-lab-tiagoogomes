@@ -2,3 +2,60 @@
     @apply
     flex-1
 }
+
+.Container-Video .video{
+    @apply
+    w-full
+    h-full
+    max-w-[1100px]
+    max-h-[60vh]
+    aspect-video
+}
+
+.Container-Video .video-elements {
+    @apply
+    bg-black 
+    flex 
+    justify-center
+}
+.Container-Video .content{
+    @apply
+    p-8
+    max-w-[1100px]
+    mx-auto
+}
+.Container-Video .video-details{
+    @apply
+    flex
+    items-start
+    gap-16
+}
+
+.Container-Video .content .video-details  h1 {
+    @apply
+    text-2xl
+    font-bold
+}
+
+.Container-Video .video-details  p{
+    @apply
+    mt-4
+    text-brand-gray-200
+    leading-relaxed
+}
+
+.Container-Video .content .video-details .Container-Buttons{
+    @apply
+    flex
+    flex-col
+    gap-4
+}
+
+.Container-Video .content .lesson-extra{
+    @apply
+    gap-8
+    mt-20
+    grid
+    grid-cols-2
+}
+

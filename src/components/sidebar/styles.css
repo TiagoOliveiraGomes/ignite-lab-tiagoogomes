@@ -1,8 +1,26 @@
 .Container-Sidebar {
     @apply
     w-[348px]
-    bg-gray-700
     p-6
     border-l
-    border-gray-600
+    bg-brand-gray-700
+    border-brand-gray-600
+}
+
+.Container-Sidebar > span {
+    @apply
+    font-bold
+    text-2xl
+    pb-6
+    mb-6
+    border-b
+    border-brand-gray-500
+    block
+}
+
+.lessons-list {
+    @apply
+    flex
+    flex-col
+    gap-8
 }

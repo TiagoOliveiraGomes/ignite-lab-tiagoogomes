@@ -1,4 +1,11 @@
+.Container-Event {
+    @apply
+    flex
+    flex-col
+    min-h-screen
+}
 .Container-Event main {
     @apply
     flex
+    flex-1
 }

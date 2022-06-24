@@ -1,0 +1,43 @@
+.Container-CardExtraButton{
+    @apply
+    bg-brand-gray-700
+    rounded
+    overflow-hidden
+    flex
+    items-stretch
+    gap-6
+    transition-colors
+    hover:bg-brand-gray-600
+}
+
+.Container-CardExtraButton header{
+    @apply
+    bg-brand-green-700
+    h-full
+    p-6
+    flex
+    items-center
+}
+
+.Container-CardExtraButton main{
+    @apply
+    py-6
+    leading-relaxed
+    flex
+    flex-col
+}
+
+.Container-CardExtraButton main p {
+    @apply
+    text-sm
+    text-brand-gray-200
+    mt-2
+}
+
+.Container-CardExtraButton footer{
+    @apply
+    h-full
+    p-6
+    flex
+    items-center
+}
