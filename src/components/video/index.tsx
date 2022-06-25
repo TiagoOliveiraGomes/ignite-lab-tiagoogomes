@@ -4,7 +4,7 @@ import CardExtraButton from '../cardExtraButton'
 import { CardProfile } from '../cardProfile'
 import './styles.css'
 import '@vime/core/themes/default.css'
-import { gql, useQuery } from '@apollo/client'
+import { useGetLessonBySlugQuery } from '../../graphql/generated'
 
 interface VideoProps {
   lessonSlug: string,
@@ -13,42 +13,16 @@ interface VideoProps {
 
 const iconImage = <Image size={40} />
 const iconArrowDown = <FileArrowDown size={40} />
-const GET_LESSON_BY_SLUG_QUERY = gql`
-query GetLessonBySlug ($slug: String) {
-  lesson(where: {slug: $slug}) {
-    title
-    videoId
-    description
-    teacher {
-      name
-      bio
-      avatarURL
-    }
-  }
-}
-`
-
-interface GetLessonBySlugResponse{
-  lesson: {
-    title: string,
-    videoId: string,
-    description:string,
-    teacher: {
-      bio:string,
-      avatarURL: string,
-      name: string,
-    }
-  }
-}
 
 export default function Video(props:VideoProps) {
-  const { data } = useQuery<GetLessonBySlugResponse>(GET_LESSON_BY_SLUG_QUERY, {
+  const { data } = useGetLessonBySlugQuery({
     variables: {
-      slug: props.lessonSlug,
+      slug: props.lessonSlug
     }
   })
+
   
-  if(!data){
+  if(!data || !data.lesson){
     return(
       <div className='flex-1'>
         <p>Carregando...</p>
@@ -69,7 +43,7 @@ export default function Video(props:VideoProps) {
         <div className='content'>
           <div className='video-details'>
 
-            <div className='flex-1'>
+            {data.lesson.teacher &&<div className='flex-1'>
               <h1>{data.lesson.title}</h1>
               <p>{data.lesson.description}</p>
               <CardProfile 
@@ -77,7 +51,7 @@ export default function Video(props:VideoProps) {
               bio={data.lesson.teacher.bio}
               imgURL={data.lesson.teacher.avatarURL}
                />
-            </div>
+            </div>}
 
             <div className='Container-Buttons'>
               <a href="/" className='default-button primary'>
