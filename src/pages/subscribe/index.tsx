@@ -62,10 +62,11 @@ export function Subscribe() {
         <img 
         className='mt-10'
         src={backgroundImg}
-        alt="imagem de background" 
+        alt="imagem do background" 
         />
 
     </div>
   )
 }
 
+//test
