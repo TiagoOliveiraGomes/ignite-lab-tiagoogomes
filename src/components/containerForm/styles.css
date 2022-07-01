@@ -1,0 +1,63 @@
+.Container-Subscribe .info-home .container-Form {
+    @apply
+    p-8
+    bg-brand-gray-700
+    border
+    border-brand-gray-500
+    rounded
+    max-w-2xl
+}
+/* max-w-[640px] */
+/* max-w-[100%] */
+
+.Container-Subscribe .info-home .container-Form strong{
+    @apply
+    text-2xl
+    mb-6
+    block
+}
+
+.Container-Subscribe .info-home .container-Form form {
+    @apply
+    flex
+    flex-col
+    gap-2
+    w-full
+}
+
+.Container-Subscribe .info-home .container-Form form input {
+    @apply
+    bg-brand-gray-900
+    rounded
+    px-5
+    h-14
+}
+
+.Container-Subscribe .info-home .container-Form form button{
+    @apply
+    mt-4
+    bg-brand-green-500
+    uppercase
+    py-4
+    rounded
+    font-bold
+    text-sm
+    transition-colors
+    hover:bg-brand-green-700
+    disabled:opacity-50
+    disabled:cursor-default
+}
+
+@media (max-width: 1280px){
+    .Container-Subscribe .info-home .container-Form{
+        @apply
+        mt-10
+        
+    }
+}
+@media (max-width: 640px){
+    .Container-Subscribe .info-home .container-Form{
+        @apply
+        w-full
+    }
+}

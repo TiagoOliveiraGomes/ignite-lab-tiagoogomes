@@ -43,7 +43,7 @@ export default function Video(props:VideoProps) {
         <div className='content'>
           <div className='video-details'>
 
-            {data.lesson.teacher &&<div className='flex-1'>
+            {data.lesson.teacher &&<div className='flex-1 min-w-[300px]'>
               <h1>{data.lesson.title}</h1>
               <p>{data.lesson.description}</p>
               <CardProfile 

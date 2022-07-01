@@ -8,4 +8,14 @@
     bg-brand-gray-700
     border-b
     border-brand-gray-600
+    p-8
+}
+
+@media (max-width: 768px){
+    .Container-Header{
+        @apply
+        justify-between
+        m-auto
+    }
+
 }

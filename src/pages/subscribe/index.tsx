@@ -1,9 +1,10 @@
-import React, { useState, FormEvent } from 'react'
+import React, { FormEvent, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Logo } from '../../components/logo'
 import { useCreateSubscriberMutation } from '../../graphql/generated'
 import './styles.css'
 import backgroundImg from '../../assets/code-Mockup.png'
+import { ContainerForm } from '../../components/containerForm'
 
 export function Subscribe() {
     const navigate = useNavigate()
@@ -30,7 +31,6 @@ export function Subscribe() {
         <div className='info-home'>
             <div className='info'>
                 <Logo />
-
                 <h1>
                     Construa uma <strong>aplicação completa</strong>, do zero, com <strong>React JS</strong>
                 </h1>
@@ -39,24 +39,7 @@ export function Subscribe() {
                 </p>
             </div>
 
-            <div className='container-Form'>
-                <strong>Inscreva-se gratuitamente</strong>
-                <form onSubmit={handleSubscribe}>
-                    <input 
-                    type="text" 
-                    placeholder='Digite seu nome completo' 
-                    onChange={event=> setName(event.target.value)}
-                    />
-                    <input 
-                    type="email" 
-                    placeholder='Digite seu email' 
-                    onChange={event=> setEmail(event.target.value)}
-                    />
-                    <button disabled={loading} type='submit'>
-                        Garantir minha vaga
-                    </button>
-                </form>
-            </div>
+            <ContainerForm setName={setName} setEmail={setEmail} handleSubscribe={handleSubscribe} loading={loading}/>
         </div>
 
         <img 

@@ -24,3 +24,10 @@
     flex-col
     gap-8
 }
+
+@media (max-width: 768px){
+    .Container-Sidebar{
+        @apply
+        hidden
+    }
+}

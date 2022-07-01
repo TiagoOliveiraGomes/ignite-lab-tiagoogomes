@@ -59,3 +59,29 @@
     grid-cols-2
 }
 
+@media (max-width: 768px){
+    .Container-Video {
+        @apply
+        w-full
+    }
+}
+
+@media (max-width: 1024px){
+    .Container-Video .video-details{
+        @apply
+        flex
+        flex-col
+        items-center
+    }
+    .Container-Video .content .video-details .Container-Buttons{
+        @apply
+        w-full
+    }
+}
+
+@media (max-width: 1250px){
+    .Container-Video .content .lesson-extra{
+        @apply
+        grid-cols-1
+    }
+}
