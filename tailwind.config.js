@@ -53,6 +53,9 @@ module.exports = {
     
       backgroundImage: {
         blur: 'url(/src/assets/background-blur.png)'
+      },
+      gridTemplateColumns: {
+        'cardComponentGridCols': '100px 1fr 50px',
       }
     },
   },
