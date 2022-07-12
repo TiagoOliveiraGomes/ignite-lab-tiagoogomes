@@ -15,7 +15,6 @@ export default function Header(props:HeaderProps) {
     <header className='Container-Header'>
         <Logo />
         <div className='ml-5 flex gap-3 text-sm'>
-          <h1>Aulas</h1>
           <MenuItem isVideoVisible={props.isVideoVisible} isSidebarVisible={props.isSidebarVisible} setIsSidebarVisible={props.setIsSidebarVisible} setIsVideoVisible={props.setIsVideoVisible} />
         </div>
     </header>

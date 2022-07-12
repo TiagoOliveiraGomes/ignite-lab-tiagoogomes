@@ -14,22 +14,20 @@ export function MenuItem(props:MenuItemProps) {
     console.log('O video e: ', props.isVideoVisible)
     console.log('A sidebar e: ', props.isVideoVisible)
     
-    // const sidebarEl = document.getElementById('SideBar')
-    // if(sidebarEl?.classList.contains('hidden')){
-    //   sidebarEl.classList.remove('hidden')
-    //   document.getElementById('video')?.classList.add('hidden')
-    // }else(
-    //   document.getElementById('video')?.classList.remove('hidden'),
-    //   sidebarEl?.classList.add('hidden')
-    // )
+    document.getElementById('lineTop')?.classList.toggle('lineTop')
+    document.getElementById('lineBottom')?.classList.toggle('lineBottom')
+    document.getElementById('lineMid')?.classList.toggle('hidden')
     
   }
 
   return (
-    <button onClick={handleMenu} className='Container-MenuItem'>
-        <div className='line-Hamburguer' />
-        <div className='line-Hamburguer' />
-        <div className='line-Hamburguer' />
-    </button>
+    <div className='flex gap-2'>
+      <h1 className='menuTitle'>Aulas</h1>
+      <button onClick={handleMenu} className='Container-MenuItem'>
+          <div id='lineTop' className='line-Hamburguer' />
+          <div id='lineMid' className='line-Hamburguer' />
+          <div id='lineBottom' className='line-Hamburguer' />
+      </button>
+    </div>
   )
 }
