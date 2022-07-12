@@ -1,5 +1,6 @@
 .Container-Sidebar {
     @apply
+    h-full
     w-[348px]
     p-6
     border-l
@@ -28,6 +29,7 @@
 @media (max-width: 768px){
     .Container-Sidebar{
         @apply
-        hidden
+        w-[100vw]
+        h-full
     }
 }

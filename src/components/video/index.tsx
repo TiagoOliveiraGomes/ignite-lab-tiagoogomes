@@ -5,12 +5,14 @@ import { CardProfile } from '../cardProfile'
 import './styles.css'
 import '@vime/core/themes/default.css'
 import { useGetLessonBySlugQuery } from '../../graphql/generated'
+import { useEffect } from 'react'
+
 
 interface VideoProps {
   lessonSlug: string,
 }
 
-
+var width = window.innerWidth;
 const iconImage = <Image size={40} />
 const iconArrowDown = <FileArrowDown size={40} />
 
@@ -29,8 +31,9 @@ export default function Video(props:VideoProps) {
       </div>
     )
   }
+
   return (
-    <div className='Container-Video'>
+    <div id='video' className='Container-Video'>
       <div className='video-elements'>
         <div className='video'>
           <Player>

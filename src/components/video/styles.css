@@ -59,6 +59,7 @@
     grid-cols-2
 }
 
+
 @media (max-width: 768px){
     .Container-Video {
         @apply
