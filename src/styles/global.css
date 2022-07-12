@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+@apply
+scrollbar-hide
+}
 body {
     @apply
     bg-brand-gray-900
