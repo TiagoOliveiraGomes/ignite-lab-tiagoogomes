@@ -36,7 +36,7 @@ O app estará disponível no seu browser pelo endereço http://localhost:3000 ou
 
 # <h2>💻 Projeto</h2>
 
-Essa plataforma de cursos foi feita com o igniteLab da Rocketseat, e utiliza 
+Essa plataforma de cursos foi feita com os ensinamentos do igniteLab da Rocketseat, e utiliza graphCMS para backend e apolloClient para auxiliar a comunicação com graphQL.
 
 ![imagem do app](https://user-images.githubusercontent.com/70171892/178576334-93c1e050-4d77-4ac1-bafd-22c897611d1d.png)
 
